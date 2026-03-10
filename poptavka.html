@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Poptávka termínu | Vinelan</title>
+  <meta name="description" content="Ověřte dostupnost atrakcí pro děti. Odešlete poptávku termínu – ozveme se s potvrzením a cenovou nabídkou." />
+  <meta name="robots" content="noindex,follow" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <style>
+    .form-wrap{padding:40px 0}
+    .form-card{
+      background:#fff;border:1px solid rgba(0,0,0,.08);
+      border-radius:22px;box-shadow:0 10px 28px rgba(0,0,0,.08);
+      padding:18px;
+    }
+    form{display:grid;gap:12px}
+    label{font-weight:800}
+    input, select, textarea{
+      width:100%;
+      padding:12px 12px;
+      border-radius:14px;
+      border:1px solid rgba(0,0,0,.12);
+      font:inherit;
+    }
+    textarea{min-height:110px;resize:vertical}
+    .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .note{color:#374151;line-height:1.5}
+    @media (max-width: 700px){.two{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+<div class="topbar" role="region" aria-label="Rychlé kontakty">
+  <div class="container topbar__inner">
+    <div class="topbar__left">
+      <span class="badge">Od roku 1994</span>
+      <span class="sep">•</span>
+      <span>Praha &amp; celá ČR</span>
+      <span class="sep">•</span>
+      <a href="tel:+420607488711">+420 607 488 711</a>
+      <span class="sep">•</span>
+      <a href="mailto:vinelanpraha@seznam.cz">vinelanpraha@seznam.cz</a>
+    </div>
+</div>
+</div>
+<header class="header">
+    <div class="container header__inner">
+      <a class="logo" href="./index.html"><img src="assets/img/logo-vinelan.webp" alt="Vinelan – Baví nás bavit" width="386" height="205" loading="eager" decoding="async"></a>
+</div>
+</header>
+</div>
+
+  <main class="form-wrap">
+    <div class="container">
+      <h1 style="margin:0 0 10px;font-size:34px;letter-spacing:-.02em;">Poptávka termínu</h1>
+      <p class="note" style="margin:0 0 18px;">
+        Vyplňte prosím datum, místo a vybrané atrakce. Ozveme se s potvrzením dostupnosti a cenovou nabídkou.
+        <strong>Rezervace termínu je závazná po uhrazení zálohy 30 %.</strong>
+      </p>
+
+      <div class="form-card">
+        <form id="poptavkaForm" onsubmit="return handleSubmit(event)">
+          <div class="two">
+            <div>
+              <label for="datum">Datum akce</label>
+              <input id="datum" name="datum" type="date" required / id="datum" name="datum">
+            </div>
+            <div>
+              <label for="misto">Místo akce (město/obec)</label>
+              <input id="misto" name="misto" type="text" placeholder="Např. Praha 8" required />
+            </div>
+          </div>
+
+          <div class="two">
+            <div>
+              <label for="typ">Typ akce</label>
+              <select id="typ" name="typ" required>
+                <option value="">Vyberte…</option>
+                <option>Dětská oslava / narozeniny</option>
+                <option>Obecní / městská slavnost</option>
+                <option>Firemní akce</option>
+                <option>Škola / školka</option>
+                <option>Sportovní akce</option>
+                <option>Jiné</option>
+              </select>
+            </div>
+            <div>
+              <label for="pocet">Odhad počtu dětí</label>
+              <input id="pocet" name="pocet" type="number" min="0" step="1" placeholder="Např. 30" />
+            </div>
+          </div>
+
+          <div>
+            <label for="atrakce">Vybrané atrakce</label>
+            <textarea id="atrakce" name="atrakce" placeholder="Např. bungee trampolíny, skákací hrad, trampolína…" required></textarea>
+          </div>
+
+          <div class="two">
+            <div>
+              <label for="telefon">Telefon</label>
+              <input id="telefon" name="telefon" type="tel" placeholder="+420…" required />
+            </div>
+            <div>
+              <label for="email">E-mail</label>
+              <input id="email" name="email" type="email" placeholder="@" required />
+            </div>
+          </div>
+
+          <div>
+            <label for="poznamka">Poznámka</label>
+            <textarea id="poznamka" name="poznamka" placeholder="Např. dostupnost elektřiny, požadovaná doba provozu, prostor…"></textarea>
+          </div>
+
+          <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:4px;">
+            <p class="form-note">Odesláním formuláře se k ničemu nezavazujete. Ozveme se vám s nezávaznou nabídkou.</p>
+<button class="btn btn--primary btn--lg" type="submit">Odeslat poptávku</button>
+            <a class="btn btn--ghost call-btn" href="tel:+420607488711">📞 Nebo volejte +420 607 488 711</a>
+          </div>
+
+          <p class="muted" style="margin:10px 0 0;font-size:13px;">
+            *Tato verze formuláře otevře e‑mailového klienta. 
+          </p>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__bottom">
+      <small>© <span id="year"></span> Vinelan.</small>
+      <small class="muted"><a href="./index.html" style="color:inherit;text-decoration:underline;">Zpět na hlavní stránku</a></small>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+  <script>
+    function handleSubmit(e){
+      e.preventDefault();
+      const f = e.target;
+      const data = Object.fromEntries(new FormData(f).entries());
+      const subject = encodeURIComponent("Poptávka termínu – Vinelan");
+      const body = encodeURIComponent(
+        "Datum: " + (data.datum||"") + "\n" +
+        "Místo: " + (data.misto||"") + "\n" +
+        "Typ akce: " + (data.typ||"") + "\n" +
+        "Počet dětí: " + (data.pocet||"") + "\n\n" +
+        "Atrakce: \n" + (data.atrakce||"") + "\n\n" +
+        "Telefon: " + (data.telefon||"") + "\n" +
+        "E-mail: " + (data.email||"") + "\n\n" +
+        "Poznámka: \n" + (data.poznamka||"")
+      );
+      window.location.href = "mailto:vinelanpraha@seznam.cz?subject=" + subject + "&body=" + body;
+      return false;
+    }
+  </script>
+
+<script>
+function siteSearch(e){
+e.preventDefault();
+var q=document.getElementById('siteSearchInput').value.toLowerCase();
+if(!q)return;
+var text=document.body.innerText.toLowerCase();
+if(text.indexOf(q)!==-1){
+alert("Text nalezen na této stránce.");
+}else{
+alert("Text na této stránce nenalezen.");
+}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!doctype html><html lang="cs"><head>
+<meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Působnost | Vinelan</title><meta name="description" content="Působnost Vinelan – Praha, ČR, po domluvě i Polsko." />
+<link rel="stylesheet" href="assets/css/styles.css" /></head><body>
+<div class="topbar" role="region" aria-label="Rychlé kontakty">
+  <div class="container topbar__inner">
+    <div class="topbar__left">
+      <span class="badge">Od roku 1994</span>
+      <span class="sep">•</span>
+      <span>Praha &amp; celá ČR</span>
+      <span class="sep">•</span>
+      <a href="tel:+420607488711">+420 607 488 711</a>
+      <span class="sep">•</span>
+      <a href="mailto:vinelanpraha@seznam.cz">vinelanpraha@seznam.cz</a>
+    </div>
+</div>
+</div>
+<header class="header"><div class="container header__inner">
+<a class="logo" href="./index.html"><img src="assets/img/logo-vinelan.webp" alt="Vinelan – Baví nás bavit" width="386" height="205" loading="eager" decoding="async"></a>
+</div>
+</header>
+</div>
+<main class="section"><div class="container">
+<div class="section__head"><h1 style="margin:0 0 8px;font-size:34px;letter-spacing:-.02em;">Kde působíme (demo)</h1>
+<p class="muted">Později zde budou SEO landing stránky pro jednotlivé regiony a města.</p></div>
+<div class="faq">
+<details id="praha" open><summary>Praha</summary><p>Pronájem atrakcí pro děti v Praze a okolí.</p></details>
+<details id="stredocesky"><summary>Středočeský kraj</summary><p>Pronájem atrakcí ve Středočeském kraji.</p></details>
+<details id="severni"><summary>Severní Čechy</summary><p>Pronájem atrakcí v Severních Čechách.</p></details>
+<details id="jizni"><summary>Jižní Čechy</summary><p>Pronájem atrakcí v Jižních Čechách.</p></details>
+<details id="zapadni"><summary>Západní Čechy</summary><p>Pronájem atrakcí v Západních Čechách.</p></details>
+<details id="plzen"><summary>Plzeň</summary><p>Pronájem atrakcí v Plzni a okolí.</p></details>
+<details id="brno"><summary>Brno</summary><p>Pronájem atrakcí v Brně a okolí.</p></details>
+<details id="polsko"><summary>Polsko</summary><p>Akce po domluvě také v Polsku (plánujeme polskou jazykovou verzi).</p></details>
+</div>
+<div class="cta-band" style="margin-top:18px;">
+<div><h3>Chcete ověřit dostupnost termínu?</h3><p class="muted">Pošlete poptávku – ozveme se s nabídkou.</p></div>
+<div class="cta-band__actions"><a class="btn btn--primary btn--lg" href="./poptavka.html">Poptat termín</a><a class="btn btn--ghost btn--lg" href="./index.html">Zpět</a></div>
+</div></div></main>
+<footer class="footer"><div class="container footer__bottom"><small>© <span id="year"></span> Vinelan.</small><small class="muted">Nový web: Jiří Karmazin</small></div></footer>
+<script src="assets/js/main.js" defer></script>
+<script>
+function siteSearch(e){
+e.preventDefault();
+var q=document.getElementById('siteSearchInput').value.toLowerCase();
+if(!q)return;
+var text=document.body.innerText.toLowerCase();
+if(text.indexOf(q)!==-1){
+alert("Text nalezen na této stránce.");
+}else{
+alert("Text na této stránce nenalezen.");
+}
+}
+</script>
+</body></html>
