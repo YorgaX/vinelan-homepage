@@ -12,6 +12,13 @@
       <a href="tel:+420607488711">+420 607 488 711</a>
       <span class="sep">•</span>
       <a href="mailto:vinelanpraha@seznam.cz">vinelanpraha@seznam.cz</a>
+    
+<div class="topbar__search">
+<form data-site-search-form>
+<input id="siteSearchInput" data-site-search-input type="text" placeholder="Hledat na webu…" aria-label="Hledat na webu" />
+<button type="submit" aria-label="Spustit vyhledávání">🔎</button>
+</form>
+</div>
     </div>
 </div>
 </div>
@@ -44,17 +51,7 @@
 </main>
 <footer class="footer"><div class="container footer__bottom"><small>© <span id="year"></span> Vinelan.</small><small class="muted">Nový web: Jiří Karmazin</small></div></footer>
 <script src="assets/js/main.js" defer></script>
-<script>
-function siteSearch(e){
-e.preventDefault();
-var q=document.getElementById('siteSearchInput').value.toLowerCase();
-if(!q)return;
-var text=document.body.innerText.toLowerCase();
-if(text.indexOf(q)!==-1){
-alert("Text nalezen na této stránce.");
-}else{
-alert("Text na této stránce nenalezen.");
-}
-}
-</script>
+<script src="assets/js/search-index.js"></script>
+<script src="assets/js/search.js"></script>
+
 </body></html>

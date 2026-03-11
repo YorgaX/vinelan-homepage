@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vyhledávání | Vinelan</title>
+  <meta name="description" content="Vyhledávání napříč webem Vinelan – atrakce, stránky i důležité informace." />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <div class="topbar" role="region" aria-label="Rychlé kontakty">
+    <div class="container topbar__inner">
+      <div class="topbar__left">
+        <span class="badge">Od roku 1994</span>
+        <span class="sep">•</span>
+        <span>Praha &amp; celá ČR</span>
+        <span class="sep">•</span>
+        <a href="tel:+420607488711">+420 607 488 711</a>
+        <span class="sep">•</span>
+        <a href="mailto:vinelanpraha@seznam.cz">vinelanpraha@seznam.cz</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a class="logo" href="./index.html"><img src="assets/img/logo-vinelan.webp" alt="Vinelan – Baví nás bavit" width="386" height="205" loading="eager" decoding="async"></a>
+    </div>
+  </header>
+
+  <main class="search-page">
+    <div class="container">
+      <div class="search-head">
+        <h1 data-search-title>Vyhledávání na webu</h1>
+        <p class="muted" data-search-meta>Prohledejte celý web Vinelan včetně atrakcí, stránek a hlavních sekcí.</p>
+        <form class="search-form-large" data-site-search-form>
+          <input type="text" placeholder="Co hledáte?" data-site-search-input data-search-page-input />
+          <button class="btn btn--primary btn--lg" type="submit">Hledat</button>
+          <a class="btn btn--ghost btn--lg" href="index.html">Zpět na web</a>
+        </form>
+      </div>
+      <div class="search-results" data-search-results></div>
+    </div>
+  </main>
+
+  <footer class="footer"><div class="container footer__bottom"><small>© <span id="year"></span> Vinelan.</small><small class="muted">Nový web: Jiří Karmazin</small></div></footer>
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/search-index.js"></script>
+  <script src="assets/js/search.js"></script>
+</body>
+</html>

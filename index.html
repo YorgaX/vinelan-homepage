@@ -73,9 +73,9 @@
 
   
 <div class="topbar__search">
-<form onsubmit="siteSearch(event)">
-<input id="siteSearchInput" type="text" placeholder="Hledat…" />
-<button type="submit">🔎</button>
+<form data-site-search-form>
+<input id="siteSearchInput" data-site-search-input type="text" placeholder="Hledat na webu…" aria-label="Hledat na webu" />
+<button type="submit" aria-label="Spustit vyhledávání">🔎</button>
 </form>
 </div>
 
@@ -564,5 +564,7 @@
   </div>
 
   <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/search-index.js"></script>
+  <script src="assets/js/search.js"></script>
 </body>
 </html>
