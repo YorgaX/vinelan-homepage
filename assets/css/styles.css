@@ -2195,3 +2195,16 @@ box-shadow:0 0 0 8px rgba(245,158,11,.15);
     white-space: normal !important;
   }
 }
+/* === SEARCH FIELD WHITE BACKGROUND === */
+
+.search-form input[type="search"],
+.search-form input[type="text"],
+input[type="search"].js-search-input {
+  background: #ffffff !important;
+  color: #000000;
+  border: 1px solid #dcdcdc;
+}
+
+.search-form input::placeholder {
+  color: #888;
+}
